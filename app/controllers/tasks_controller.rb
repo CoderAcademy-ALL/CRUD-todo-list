@@ -1,21 +1,20 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-
+  before_action :set_link, only:[:destroy, :edit, :update, :show]
 
   def index
      @tasks = Task.all
   end
 
   def new
-    @task = Task.new
+    @task = current_user.tasks.build
   end
 
   def show
-      @task = Task.find(params[:id])
   end
 
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.build(task_params)
     if @task.save
       redirect_to @task
     else
@@ -24,10 +23,20 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
     @task.destroy
-   
     redirect_to tasks_path
+  end
+
+  def edit
+  end
+
+  def update
+
+    if @task.update(task_params)
+      redirect_to @task
+    else
+      render 'edit'
+    end
   end
 
   private
@@ -35,6 +44,8 @@ class TasksController < ApplicationController
       params.require(:task).permit(:title, :description, :category, :priority, :complete)
   end
 
-
+  def set_link
+    @task = Task.find(params[:id])
+  end
 
 end
