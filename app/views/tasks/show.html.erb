@@ -23,6 +23,10 @@
   <%= @task.priority %>
 </p>
 
-<%= link_to 'Delete Task', task_path(article),
+<<<<<<< HEAD
+<%= link_to 'Delete', task_path(@task),
+=======
+<%= link_to 'Delete Task', task_path(@task),
+>>>>>>> tmp
     method: :delete,
     data: { confirm: 'Are you sure?' } %>
