@@ -1,0 +1,44 @@
+
+<% if @task.errors.any? %>
+    <div>
+        <h2><%= pluralize(@task.errors.count, "error" ) %> prevented this task from saving</h2>
+        <ul>
+            <% @task.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_for @task do |f| %>
+<p>
+<div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+</div>
+</p>
+<div>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+</div>
+
+<div>
+    <%= f.label :complete %><br>
+    <%= f.check_box :complete %>
+</div>
+
+<div>
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+</div>
+
+<div>
+    <%= f.label :priority %><br>
+    <%= f.number_field :priority %>
+</div>
+
+<div>
+    <%= f.submit %>
+</div>
+
+<% end %>
