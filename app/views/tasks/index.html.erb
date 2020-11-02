@@ -1,0 +1,8 @@
+<h1>Your stuff to do</h1>
+
+<%= @tasks.each do |task| %>
+    <%= "Task: #{task.title}" %>
+    <%= "Category: #{task.category}" %>
+    <%= "Priority: #{task.priority}" %>
+    <%= "due_date: #{task.due_date}" %>
+<% end %>
