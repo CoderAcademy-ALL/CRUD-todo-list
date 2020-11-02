@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "home#index"
+
+
+  root to: "homes#index"
+
+  # routes long form
+  # get '/tasks', to: 'tasks#index'
+  # get '/tasks/new', to: 'tasks#new', as: 'new_task'
+  # post '/tasks, to: tasks#create'
+
   resources :tasks
+  
+
 end
