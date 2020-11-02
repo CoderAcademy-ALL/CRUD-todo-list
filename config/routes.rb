@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
+
   root to: "homes#index"
 
   # routes long form
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
 
   resources :tasks
   
+
 end
