@@ -5,4 +5,5 @@
     <%= "Category: #{task.category}" %>
     <%= "Priority: #{task.priority}" %>
     <%= "due_date: #{task.due_date}" %>
+    <%= link_to 'Show', task_path(task) %>
 <% end %>
