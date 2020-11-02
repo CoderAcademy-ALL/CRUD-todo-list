@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_link, only:[:destroy, :edit, :update]
+  before_action :set_link, only:[:destroy, :edit, :update, :show]
 
   def index
      @tasks = Task.all
@@ -11,7 +11,6 @@ class TasksController < ApplicationController
   end
 
   def show
-      @task = Task.find(params[:id])
   end
 
   def create
@@ -37,7 +36,7 @@ class TasksController < ApplicationController
     if @task.update(task_params)
       redirect_to @task
     else
-      redner 'edit'
+      render 'edit'
     end
   end
 
