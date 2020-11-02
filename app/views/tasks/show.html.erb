@@ -22,3 +22,7 @@
   <strong>priority:</strong>
   <%= @task.priority %>
 </p>
+
+<%= link_to 'Delete Task', task_path(article),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
