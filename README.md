@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Trello Board [here](https://trello.com/b/K7Et9Nsb/to-do-lists)
 
-Things you may want to cover:
+# User stories 
 
-* Ruby version
+**MVP**
 
-* System dependencies
+- Users can log in so they can create a todo list
+- users can give task a title, description, done or not, due date, select from a category
+- Users can add tasks (create) to the todo list
+- Users can view individual tasks (show)
+- Users can see all task (index) when they log in so they can what they need to do
+- Users can update tasks (tbc what can be updated) to make changes to priority and due date
+- Users can delete tasks when they are done to clear the board
+- User can sort their todo list by priority
 
-* Configuration
+**Sprinkles**
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Users can select a background image for their board so they can personalise it
+- Users can also sort by due date so they can see when things are due
