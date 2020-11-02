@@ -1,30 +1,62 @@
-<p>
-  <strong>Title:</strong>
-    <%= @task.title %>
-</p>
+<p>Message to the guys: This is the start of the show page, everything above is inherited (aka navbar and application.html.erb)</p>
 
-<p>
-  <strong>Due:</strong>
-  <%= @task.due_date %>
-</p>
-
-<p>
-  <strong>category:</strong>
-  <%= @task.category %>
-</p>
- 
-<p>
-  <strong>Description:</strong>
-  <%= @task.description %>
-</p>
-
-<p>
-  <strong>priority:</strong>
-  <%= @task.priority %>
-</p>
+<h1 class="center">Hero Image???</h1>
 
 
-<%= link_to 'Edit Task', edit_task_path(@task) %>
-<%= link_to 'Delete', task_path(@task),
-    method: :delete,
-    data: { confirm: 'Are you sure?' } %>
+<div id="show-divide">
+  
+  <div id="show-divide-left">
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">Complete?</label>
+  </div>
+
+    <p>Comments - to add</p>
+  </div>
+
+
+  <div class="show-divide-right">
+    <button class="button-1"><%= link_to ' Edit ', edit_task_path(@task) %></button><p class="p-1"><br></p>
+    <button class="button-1"><%= link_to 'Delete', task_path(@task),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></button>
+  </div>
+
+
+</div>
+
+<p class="p-1"><br></p><p class="p-1"><br></p>
+
+<div class="card text-center card-1">
+  
+  <div class="card-header">
+    <h2><strong><%= @task.title %></strong></h2>
+  </div>
+
+  <div class="card-body">
+
+    <div class="card-body-subset">
+    <p class="card-title">Decription</p>
+    <p class="card-text"><%= @task.description %></p>
+    </div>
+
+    <div class="card-body-subset">
+    <p class="card-title">Category</p>
+    <p class="card-text"><%= @task.category %></p>
+    </div>
+
+    <div class="card-body-subset">
+    <p class="card-title">Due Date: </p>
+    <p class="card-text"><%= @task.due_date %></p>
+    </div>
+
+  </div>
+
+  <div class="card-footer text-muted">
+    <p class="card-text">Created <%= time_ago_in_words(@task.created_at) %></p>
+  </div>
+
+</div>
+
+
