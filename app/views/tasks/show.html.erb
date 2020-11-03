@@ -1,8 +1,17 @@
-<p>Message to the guys: This is the start of the show page, everything above is inherited (aka navbar and application.html.erb)</p>
-
-<h1 class="center">Hero Image???</h1>
-
-
+<div class="show-img center">
+  <% case @task.category  %>
+  <% when 'Shopping' %>
+    <%= image_tag 'shopping.jpg' %>
+  <% when 'Travel' %>
+    <%= image_tag 'travel.jpg' %>
+  <% when 'Health' %>
+    <%= image_tag 'health.jpg' %>
+  <% when 'Work' %>
+    <%= image_tag 'work.jpg' %>
+  <% when 'Misc' %>
+    <%= image_tag 'misc.webp' %>
+  <% end %>
+</div>
 <div id="show-divide">
   
   <div id="show-divide-left">
@@ -58,5 +67,6 @@
   </div>
 
 </div>
+
 
 
