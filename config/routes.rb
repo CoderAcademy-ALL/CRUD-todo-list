@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   resources :tasks
   
+  get '/user' => "tasks#index", :as => :user_root
 
 end
