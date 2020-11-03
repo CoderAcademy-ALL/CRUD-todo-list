@@ -1,24 +1,26 @@
 <h1 class="center">Your stuff to do</h1>
 
 <% for task in @tasks %>
-    <div class="link row clearfix link-overview">
-        <div class="link-rating">
-            <div>
-                <h2><%= link_to task.title, task_path(task) %></h2>
+    <% if task.user == current_user %>
+        <div class="link row clearfix link-overview">
+            <div class="link-rating">
+                <div>
+                    <h2><%= link_to task.title, task_path(task) %></h2>
+                </div>
+                <div>
+                    <% case task.priority %>
+                    <% when 1 %>
+                        <h2 class="case-1"><%= task.priority %></h2>
+                    <% when 2 %>
+                        <h2 class="case-2"><%= task.priority %></h2>
+                    <% when 3 %>
+                        <h2 class="case-3"><%= task.priority %></h2>
+                    <% end %>
+                </div>
             </div>
             <div>
-                <% case task.priority %>
-                <% when 1 %>
-                    <h2 class="case-1"><%= task.priority %></h2>
-                <% when 2 %>
-                    <h2 class="case-2"><%= task.priority %></h2>
-                <% when 3 %>
-                    <h2 class="case-3"><%= task.priority %></h2>
-                <% end %>
+                <h2><small class="author">Created <%= time_ago_in_words(task.created_at) %> ago</small></h2>
             </div>
         </div>
-        <div>
-            <h2><small class="author">Created <%= time_ago_in_words(task.created_at) %> ago</small></h2>
-        </div>
-    </div>
+    <% end %>
 <% end %>

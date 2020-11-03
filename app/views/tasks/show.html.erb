@@ -26,10 +26,12 @@
 
 
   <div class="show-divide-right">
-    <button class="button-1"><%= link_to ' Edit ', edit_task_path(@task) %></button><p class="p-1"><br></p>
-    <button class="button-1"><%= link_to 'Delete', task_path(@task),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %></button>
+    <% if @task.user == current_user %>
+      <button class="button-1"><%= link_to ' Edit ', edit_task_path(@task) %></button><p class="p-1"><br></p>
+      <button class="button-1"><%= link_to 'Delete', task_path(@task),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></button>
+          <% end %>
   </div>
 
 
