@@ -143,19 +143,21 @@ nav {
     justify-content: space-around;
 }
 
-// .actions {
-//   padding: 12px 0px 12px 0px
-// }
+.actions {
+  padding: 12px 0px 12px 0px
+}
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
-    // width: 100%;
-    // padding: 12px;
-    // border: 1px solid #ccc;
-    // border-radius: 4px;
-    // box-sizing: border-box;
-    // resize: vertical;
+.container {
+    input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
   }
+}
 
   /* Style the label to display next to the inputs */
 label {
