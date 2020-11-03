@@ -1,9 +1,12 @@
 <h1>Your stuff to do</h1>
 
 <% for task in @tasks %>
-    <%= "Task: #{task.title}" %>
-    <%= "Category: #{task.category}" %>
-    <%= "Priority: #{task.priority}" %>
-    <%= "due_date: #{task.due_date}" %>
-    <%= link_to 'Show', task_path(task) %>
+    <div class="link row clearfix">
+        <div class="link-rating">
+            <h2><%= link_to task.title, task_path(task) %></h2>
+            <%= task.priority %>
+        </div>
+            
+            <h2><small class="author">Created <%= time_ago_in_words(task.created_at) %> ago</small></h2>
+    </div>
 <% end %>

@@ -35,10 +35,16 @@
 
         <div class="row">
             <div class="">
-                <%= f.label :category %>
+                <label for="category">Category</label>
             </div>
             <div class="">
-                <%= f.text_field :category, placeholder: "Shopping" %>
+                <select id="category" name="category">
+                    <option value="Shopping">Shopping</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Misc">Misc</option>
+                    <option value="Health">Health</option>
+                    <option value="Work">Work</option>
+                </select>
             </div>
         </div>
 
