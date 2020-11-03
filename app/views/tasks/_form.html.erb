@@ -10,35 +10,62 @@
     </div>
 <% end %>
 
-<%= form_for @task do |f| %>
-<p>
-<div>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-</div>
-</p>
-<div>
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-</div>
+<div class="container">
 
-<div>
-    <%= f.label :complete %><br>
-    <%= f.check_box :complete %>
-</div>
+    <%= form_for @task do |f| -%>
 
-<div>
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
-</div>
+        <div class="row">
+            <div class="">
+                <%= f.label :title -%>
+            </div>
+            <div class="">
+                <%= f.text_field :title, placeholder: "Food!" -%>
+            </div>
+        </div>
 
-<div>
-    <%= f.label :priority %><br>
-    <%= f.number_field :priority %>
-</div>
 
-<div>
-    <%= f.submit %>
-</div>
+        <div class="row">
+            <div class="">
+                <%= f.label :description %>
+            </div>
+            <div class="">
+                <%= f.text_area :description, placeholder: "Eggs Milk" %>
+            </div>
+        </div>
 
-<% end %>
+        <div class="row">
+            <div class="">
+                <label for="category">Category</label>
+            </div>
+            <div class="">
+                <select id="category" name="category">
+                    <option value="Shopping">Shopping</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Misc">Misc</option>
+                    <option value="Health">Health</option>
+                    <option value="Work">Work</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="">
+                <label for="Priority">Priority</label>
+            </div>
+            <div class="">
+                <select id="priority" name="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="btn">
+            <%= f.submit %>
+        </div>
+
+    <% end %>
+
+</div>
