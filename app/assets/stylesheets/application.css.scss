@@ -15,6 +15,12 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
+ $nav-bar: #FE5F55;  
+ $background: #F7F7FF; 
+ $button-colors: #BDD5EA; 
+ $button-font: #fff;
+
  body {
     background-color: #bdd5ea;
     margin: 0 20px;
@@ -33,7 +39,7 @@
 }
 
 .button-1 {
-    background-color: #495867;
+    background-color: $background;
     border: none;
     padding: 15px 15px;
     text-align: center;
