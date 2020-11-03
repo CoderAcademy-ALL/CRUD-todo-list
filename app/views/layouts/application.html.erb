@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToDoList</title>
+    <title>What A To-Do</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,11 +15,16 @@
       <p class="alert"><%= alert %></p>
       <nav style="border-bottom: 1px solid black;">
         <% if user_signed_in? %>
-          <p>Hello, <%= "#{current_user.username}!" %> <p>
-          <%= link_to "Logout", destroy_user_session_path, method: 'delete' %>
+          <p>Hello, <%= "#{current_user.username}!" %> </p>
+          <%= link_to 'Home', tasks_path %>
+          <%= link_to 'New', new_task_path %>
+          Account
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
         <% else %>
-		      <%= link_to "Login", new_user_session_path %>
+		      <%= link_to "Sign In", new_user_session_path %>
 		      <%= link_to "Sign Up", new_user_registration_path %> 
+          About Us
 	      <% end %>
       </nav>
     <%= yield %>
