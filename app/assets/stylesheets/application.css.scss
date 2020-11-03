@@ -14,15 +14,16 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import 'homes.scss';
 
 
- $nav-bar: #FE5F55;  
+ $nav-bar:#FE5F55;  
  $background: #F7F7FF; 
  $button-colors: #BDD5EA; 
  $button-font: #fff;
 
  body {
-    background-color: #bdd5ea;
+    background-color: $background;
     margin: 0 20px;
 }
 
@@ -80,5 +81,30 @@
 
 .card-text {
     padding-left: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: 5% auto;
+    border: 1px solid red;
+    padding-top: 10px;
+    
+    img {
+        width: 60vw;   
+        background-color: #1e89cb;
+        margin: 0px auto;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 26px;
+        font-style: oblique;
+    }
+
+    .button-box {
+        margin: 10px auto;
+    }
 
 }
