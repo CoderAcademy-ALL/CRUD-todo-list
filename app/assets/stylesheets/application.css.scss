@@ -53,17 +53,23 @@ nav {
 
     /*icon sizing*/
     img {
-       
         width:56px; 
         height:72px;
-        
     }
-    
+
+    p {
+        color: #fff;
+        padding: 3px;
+        margin-left: 15px;
+        float: right;
+        text-align: center;
+    }
+
     a {
         text-decoration: none;
         color: #fff;
         padding: 3px;
-        float: right;
+        float: left;
         margin-right: 15px;
         text-transform: uppercase;
     }
