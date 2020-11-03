@@ -3,8 +3,7 @@
 <% for task in @tasks %>
     <div class="link row clearfix">
         <div class="link-rating">
-            <h2><%= link_to task.title, task_path(task) %></h2>
-            <%= task.priority %>
+            <h2><%= link_to task.title, task_path(task) %> | <%= task.priority %> </h2>
         </div>
             
             <h2><small class="author">Created <%= time_ago_in_words(task.created_at) %> ago</small></h2>
