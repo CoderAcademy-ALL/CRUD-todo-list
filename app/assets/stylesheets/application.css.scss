@@ -216,3 +216,32 @@ label {
     }
   }
 
+  .main-div {
+    margin-left: 50px;
+  }
+
+  .link-rating {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .link-overview {
+      width: 500px;
+      margin: 0 auto;
+  }
+
+  .index-ovw {
+      text-align: center;
+  }
+
+  .case-1 {
+      color: red;
+  }
+
+  .case-2 {
+    color: orange;
+}
+
+.case-3 {
+    color: greenyellow;
+}
