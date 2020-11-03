@@ -19,6 +19,7 @@
 
       <nav>
 
+        <div class="start">
         <%= link_to tasks_path do %>
           <%= image_tag "logov1.png" %>
         <% end %>
@@ -26,6 +27,7 @@
        
         <% if user_signed_in? %>
           <p>Hello, <%= "#{current_user.username}!" %> </p>
+        </div>
           <div class="cheat">
           <%= link_to 'New', new_task_path %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
