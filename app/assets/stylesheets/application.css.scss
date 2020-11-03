@@ -36,11 +36,7 @@
 //------------thicc------------//
 header {
     background-color: $nav-bar;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     padding: 0px 5px;
-
 }
 
 nav {
@@ -59,10 +55,7 @@ nav {
 
     p {
         color: #fff;
-        padding: 3px;
-        margin-left: 15px;
-        float: right;
-        text-align: center;
+        margin: auto 0;
     }
 
     a {
@@ -77,15 +70,21 @@ nav {
         a:hover {
             text-decoration: none;
         }
+}
 
-    
+.start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .cheat {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
+
+
 
 .show-divide-right {
     float: right;
