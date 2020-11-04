@@ -44,20 +44,11 @@
 
 
         <div class="row">
-            <div class="">
-                <%= f.label :priority %>
+            <div class="defcon">
+                <p>DEFCON Level</p>
             </div>
             <div class="">
                 <%= f.select :priority, options_for_select(["1", "2", "3"]) %>
-            </div>
-        </div>
-
-        <div class="row">
-            <div>
-                <%= f.label :due_date %>
-            </div>
-            <div>
-                <%= f.date_select :due_date %>
             </div>
         </div>
 

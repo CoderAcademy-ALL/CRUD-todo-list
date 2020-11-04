@@ -16,15 +16,13 @@
   
   <div id="show-divide-left">
 
+    <button class="button-1"><%=link_to "Back", tasks_path %></button>
+  </div>
+
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
     <label class="form-check-label" for="defaultCheck1">Complete?</label>
   </div>
-
-
-    <button class="button-1"><%=link_to "Back", tasks_path %></button>
-  </div>
-
 
   <div class="show-divide-right">
     <% if @task.user == current_user %>
@@ -56,11 +54,6 @@
     <div class="card-body-subset">
     <p class="card-title">Category</p>
     <p class="card-text"><%= @task.category %></p>
-    </div>
-
-    <div class="card-body-subset">
-    <p class="card-title">Due Date: </p>
-    <p class="card-text"><%= @task.due_date %></p>
     </div>
 
   </div>
