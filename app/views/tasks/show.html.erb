@@ -21,14 +21,15 @@
     <label class="form-check-label" for="defaultCheck1">Complete?</label>
   </div>
 
-    <p>Comments - to add</p>
+
+    <button class="button-1"><%=link_to "Back", tasks_path %></button>
   </div>
 
 
   <div class="show-divide-right">
     <% if @task.user == current_user %>
       <button class="button-1"><%= link_to ' Edit ', edit_task_path(@task) %></button><p class="p-1"><br></p>
-      <button class="button-1"><%= link_to 'Delete', task_path(@task),
+      <button class="button-2"><%= link_to 'Delete', task_path(@task),
             method: :delete,
             data: { confirm: 'Are you sure?' } %></button>
     <% end %>
