@@ -1,4 +1,8 @@
-<h1 class="center">Your stuff to do</h1>
+<div class="index-head">
+    <div></div>
+    <h1 class="center">Your stuff to do</h1>
+    <button type="button" class="add-button" style="color:white"> <%= link_to 'Add Task', new_task_path %> </button>
+</div>
 
 <% for task in @tasks %>
     <% if task.user == current_user %>
