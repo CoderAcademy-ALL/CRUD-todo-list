@@ -17,6 +17,7 @@
 
  @import 'homes';
  @import "registration";
+ @import 'tasks';
 
 
 
@@ -226,10 +227,7 @@ label {
       justify-content: space-between;
   }
 
-  .link-overview {
-      width: 500px;
-      margin: 0 auto;
-  }
+
 
   .index-ovw {
       text-align: center;
